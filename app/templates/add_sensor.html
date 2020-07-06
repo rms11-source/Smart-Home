@@ -1,0 +1,42 @@
+{% extends 'dashboard_layout.html' %}
+
+{% block content %}
+
+        <h3><i class="fa fa-angle-right"></i> Add sensor</h3>
+        <div class="row mt">
+          <div class="form-panel">
+              <form role="form" class="form-horizontal style-form" method="post">
+                <div class="form-group has-success">
+                  <h4 class="mb"><label class="col-lg-2 control-label">Type</label></h4>
+                  <div class="col-lg-10">
+                    <input type="text" placeholder="" id="type" class="form-control" name="type">       
+                  </div>
+                </div>
+                <div class="form-group has-success">
+                  <h4 class="mb"><label class="col-lg-2 control-label">Location</label></h4>
+                  <div class="col-lg-10">
+                    <input type="text" placeholder="" id="type" class="form-control" name="location">       
+                  </div>
+                </div>
+              
+              <div>
+                <input type="radio" id="inside" name="inside" value="inside">
+                <label for="inside">Inside</label><br>
+
+                <input type="radio" id="outside" name="inside" value="outside">
+                <label for="inside">Outside</label><br>
+              </div>
+                <div class="form-group">
+                  <div class="col-lg-offset-2 col-lg-10">
+                    <button class="btn btn-theme" type="submit">Save</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- /form-panel -->
+          </div>
+          <!-- /col-lg-12 -->
+        </div>
+        </div>
+     
+  {% endblock %}
