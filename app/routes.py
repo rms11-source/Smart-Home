@@ -11,8 +11,9 @@ from datetime import datetime
 @app.route('/')
 def hello():
     # mqtt.publish('home/testtopic', 'hello world')
-    message = '{"v": 10.2, "t": "h",  "id": "sensor1", "ts": "04-03-12 12:00"}'
-    mqtt.publish('home/datatopic', message)
+    # Only for test
+    # message = '{"v": 10.2, "t": "h",  "id": "sensor3", "ts": "04-03-12 12:00"}'
+    # mqtt.publish('home/datatopic', message)
 
     data = SensorData.query.limit(20).all()
 
