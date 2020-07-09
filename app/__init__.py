@@ -9,12 +9,12 @@ import requests
 app = Flask(__name__)
 app.secret_key = "secret"
 
-# app.config['MY_IP'] = '192.168.0.88'
-# app.config['MQTT_BROKER_URL'] = '192.168.0.88'  # use the free broker from HIVEMQ
+app.config['MY_IP'] = '192.168.0.88'
+app.config['MQTT_BROKER_URL'] = '192.168.0.88'  # use the free broker from HIVEMQ
 
 # TODO!!! de pus ip-ul!
-app.config['MY_IP'] = '192.168.1.102'  # use the free broker from HIVEMQ
-app.config['MQTT_BROKER_URL'] = '192.168.1.102'  # use the free broker from HIVEMQ
+# app.config['MY_IP'] = '192.168.1.102'  # use the free broker from HIVEMQ
+# app.config['MQTT_BROKER_URL'] = '192.168.1.102'  # use the free broker from HIVEMQ
 
 app.config['MQTT_BROKER_PORT'] = 1883  # default port for non-tls connection
 app.config['MQTT_USERNAME'] = ''  # set the username here if you need authentication for the broker
@@ -23,8 +23,8 @@ app.config['MQTT_KEEPALIVE'] = 5  # set the time interval for sending a ping to 
 app.config['MQTT_TLS_ENABLED'] = False  # set TLS to disabled for testing purposes
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////database.db'
-# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////home/mdiannna/Code/Smart-Home/database.db"
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///C:/Users/stavr/Documents/Smart Home/database.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////home/mdiannna/Code/Smart-Home/database.db"
+# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///C:/Users/stavr/Documents/Smart Home/database.db"
 # app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///C:/Users/tatia/Desktop/server/database.db"
 
 db = SQLAlchemy(app)
