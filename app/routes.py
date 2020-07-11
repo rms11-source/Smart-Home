@@ -31,13 +31,6 @@ def transform_to_chart_data(data, type):
 
 @app.route('/')
 def hello():
-    # mqtt.publish('home/testtopic', 'hello world')
-
-    # value = random.choice([10, 20, 30, 49,23, 34, 12, 5])
-    # stype = random.choice(['h', 't', 'g'])
-
-    # message = '{"v": ' +str( value) + ', "t": "' + stype + '",  "id": "sensor1", "ts": "04-03-12 12:00"}'
-    # mqtt.publish('home/testtopic', message)
 
     data = SensorData.query.order_by(desc(SensorData.timestamp)).limit(20).all()
     
