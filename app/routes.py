@@ -55,11 +55,14 @@ def hello():
 
 @app.route('/post-sensor-data', methods=["GET", "POST"])
 def post_sensor_data():
+    print("SENSOR DATA!")
+
     if request.method=="POST":
+        print("POST SENSOR DATA!")
         input_json = request.get_json(force=True) 
 
         print ('data from client:', input_json)
-        add_json_data(input_json["payload"])
+        add_json_data(input_json)
         print("post!!!")
         dictToReturn = {'status': "received"}
         return jsonify(dictToReturn)

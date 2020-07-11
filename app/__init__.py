@@ -89,12 +89,13 @@ def on_message(client, userdata, message):
         #print(dhtreadings_json['temperature'])
         #print(dhtreadings_json['humidity'])
 
-        dhtreadings_json = json.loads(message.payload)
+        # dhtreadings_json = json.loads(message.payload)
+        dhtreadings_json = message.payload
         print("---MQTT RECEIVE---")
         print(dhtreadings_json)
-        
+
         myIp = app.config['MY_IP']
-        res = requests.post('http://' + myIp + ':5000/post-sensor-data', json=data)
+        res = requests.post('http://' + myIp + ':5000/post-sensor-data', json=dhtreadings_json)
         print ('response from server:',res.text)
 
         # dictFromServer = res.json()
