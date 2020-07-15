@@ -1,4 +1,4 @@
-# MQTT_Server_Smart_Home
+# Smart_Home
 On_Fire_Webpage
 Project code for the IoT bootcamp 2020 project - an IoT system which helps people with breathing problems and chronic diseases of the respiratory system have more control of their health.
 
@@ -16,5 +16,5 @@ Local MQTT server - https://github.com/rms11-source/Smart-Home
 AI - https://github.com/Junumboxo/IoT-project-bootcamp-AI
 
 ESP code - https://github.com/rms11-source/IoT---BOOTCAMP/tree/master/ESP_IN
-           https://github.com/rms11-source/IoT---BOOTCAMP/tree/master/ESP_OUT
+https://github.com/rms11-source/IoT---BOOTCAMP/tree/master/ESP_OUT
            
